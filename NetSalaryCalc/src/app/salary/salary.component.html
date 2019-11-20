@@ -1,0 +1,92 @@
+<body class="container">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <h2>מחשבון שכר</h2>
+
+    <div class="form-group">
+      <label>
+        משכורת בסיס:
+        <input
+          class="form-control"
+          type="text"
+          formControlName="basePay"
+          placeholder="ש''ח"
+          (change)="onSubmit()"
+        />
+      </label>
+
+      <label>
+        פנסיה:
+        <input
+          class="form-control"
+          type="text"
+          formControlName="pension"
+          placeholder="6%"
+        />
+      </label>
+
+      <label>
+        קרן השתלמות:
+        <input
+          class="form-control"
+          type="text"
+          formControlName="investmentFund"
+          placeholder="2.5%"
+        />
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary" (ngSubmit)="onSubmit()">
+      Submit
+    </button>
+  </form>
+  <div class="results">
+    <label class="item">
+      מס הכנסה
+      <input
+        class="form-control"
+        type="text"
+        [formControl]="incomeTax"
+        placeholder="מס הכנסה"
+      />
+    </label>
+    <label class="item">
+      ביטוח לאומי
+      <input
+        class="form-control"
+        type="text"
+        [formControl]="socialSecurity"
+        placeholder="ביטוח לאומי"
+      />
+    </label>
+    <label class="item">
+      מס בריאות
+      <input
+        class="form-control"
+        type="text"
+        [formControl]="healthTax"
+        placeholder="מס בריאות"
+      />
+    </label>
+    <label class="item">
+      פנסיה
+      <input
+        class="form-control"
+        type="text"
+        [formControl]="pension"
+        placeholder="פנסיה"
+      />
+    </label>
+    <label class="item">
+      קרן השתלמות
+      <input
+        class="form-control"
+        type="text"
+        [formControl]="investmentFund"
+        placeholder="קרן השתלמות"
+      />
+    </label>
+    <label class="item">
+      <b> שכר נטו </b>
+      <input class="form-control" type="text" [formControl]="netPay" disabled />
+    </label>
+  </div>
+</body>

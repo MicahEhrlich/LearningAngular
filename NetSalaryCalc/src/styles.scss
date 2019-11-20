@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container {
+  text-align: center;
+  background-color: rgb(136, 174, 224);
+  color: darkblue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.form-control {
+  padding-left: 10px;
+}
+
+.results {
+  text-align: center;
+  flex-direction: row;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.item {
+  flex-grow: 1; /* default 0 */
+  align-self: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
